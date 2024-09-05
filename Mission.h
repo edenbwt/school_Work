@@ -8,10 +8,15 @@
 class Mission {
 
 public:
-
+	Mission();
+	~Mission();
+	Mission()
 
 
 private:
+	int nbPerssone;
+	std::string descriptionMission;
+	int nbHeure;
 
 
 
