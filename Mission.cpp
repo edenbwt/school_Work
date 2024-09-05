@@ -1,16 +1,16 @@
 #include "mission.h"
 #include <iostream>
 
-// Default constructor
+
 Mission::Mission() : nbPerssone(0), descriptionMission(""), nbHeure(0) {}
 
-// Destructor
 Mission::~Mission() {}
 
-// Copy constructor
-Mission::Mission(const Mission& miss) : nbPerssone(miss.nbPerssone), descriptionMission(miss.descriptionMission), nbHeure(miss.nbHeure) {}
 
-// Assignment operator
+Mission::Mission(const Mission& miss)
+    : nbPerssone(miss.nbPerssone), descriptionMission(miss.descriptionMission), nbHeure(miss.nbHeure) {}
+
+
 Mission& Mission::operator=(const Mission& miss) {
     if (this != &miss) {
         this->nbPerssone = miss.nbPerssone;
@@ -20,38 +20,29 @@ Mission& Mission::operator=(const Mission& miss) {
     return *this;
 }
 
-// Getter and setter for number of people
+
 int Mission::GetNombredepersonne() {
     return nbPerssone;
 }
 
-int Mission::setNombredepersonne() {
-    return nbPerssone;
+void Mission::setNombredepersonne(int nb) {
+    this->nbPerssone = nb;
 }
 
-// Getter and setter for mission description
+
 std::string Mission::getDescription() {
     return descriptionMission;
 }
 
-std::string Mission::setDescription() {
-    return descriptionMission;
+void Mission::setDescription(const std::string& desc) {
+    this->descriptionMission = desc;
 }
 
-// Getter and setter for number of hours
+
 int Mission::GetnbHeure() {
     return nbHeure;
 }
 
-int Mission::setNbHeures() {
-    return nbHeure;
-}
-
-// Placeholder methods for entreprise mission handling
-void Mission::SetEntreprisseMission() {
-    // Implementation for associating the mission with the company
-}
-
-void Mission::GetEntreprisseMission() {
-    // Implementation for retrieving the company's mission
+void Mission::setNbHeures(int nbHeures) {
+    this->nbHeure = nbHeures;
 }

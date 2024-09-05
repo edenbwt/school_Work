@@ -3,44 +3,26 @@
 #include <iostream>
 #include <string>
 
-
-
 class Mission {
-
 public:
-	Mission();
-	~Mission();
-	Mission(const Mission& miss);
-	Mission& operator = (const Mission& miss);
+    Mission();
+    ~Mission();
+    Mission(const Mission& miss);
+    Mission& operator = (const Mission& miss);
 
+    int GetNombredepersonne();
+    void setNombredepersonne(int nb);
 
+    std::string getDescription();
+    void setDescription(const std::string& desc);
 
-	int GetNombredepersonne();
-	int setNombredepersonne();
-
-	std::string setDescription();
-	std::string getDescription();
-
-	int setNbHeures();
-	int GetnbHeure();
-
-	void SetEntreprisseMission();
-	void GetEntreprisseMission();
-
+    int GetnbHeure();
+    void setNbHeures(int nbHeures);
 
 private:
-	int nbPerssone;
-	std::string descriptionMission;
-	int nbHeure;
-
-
-
-protected:
-
-
-
-
-
-
+    int nbPerssone;
+    std::string descriptionMission;
+    int nbHeure;
 };
+
 #endif
