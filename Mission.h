@@ -10,7 +10,22 @@ class Mission {
 public:
 	Mission();
 	~Mission();
-	Mission()
+	Mission(const Mission& miss);
+	Mission& operator = (const Mission& miss);
+
+
+
+	int GetNombredepersonne();
+	int setNombredepersonne();
+
+	std::string setDescription();
+	std::string getDescription();
+
+	int setNbHeures();
+	int GetnbHeure();
+
+	void SetEntreprisseMission();
+	void GetEntreprisseMission();
 
 
 private:
