@@ -10,7 +10,7 @@ int main() {
     Mission mission1;
     mission1.setDescription("Develop new software platform");
     mission1.setNombredepersonne(20);
-    mission1.setNbHeures(400);
+    mission1.setNbHeures(500);
 
     
     e1.assignMission(mission1);
